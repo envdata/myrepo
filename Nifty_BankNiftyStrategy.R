@@ -1,7 +1,6 @@
 
 #NIFTy and BankNIfty startegy analysis and backtesting
 
-
 #packages
 require(Quandl)
 require(dplyr)
