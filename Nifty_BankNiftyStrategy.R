@@ -20,7 +20,9 @@ which(BANKNIFTY$Returns==min(BANKNIFTY$Returns))
 
 ml=lm(NIFTY$Returns[1:(nrow(NIFTY)-1)] ~ BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)])
 ml_rev=lm(BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)] ~ NIFTY$Returns[1:(nrow(NIFTY)-1)])
-summary(ml_rev)
+summary(ml)
 anova(ml)
 abline()
 cov(NIFTY$Returns,BANKNIFTY$Returns)
+predict.lm(ml_rev,newdata=0.5)
+
