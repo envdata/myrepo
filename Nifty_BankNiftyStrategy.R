@@ -5,6 +5,7 @@
 require(Quandl)
 require(dplyr)
 
+
 NIFTY=Quandl("NSE/NIFTY_50",api_key="uYHynQoeChxswuz2Sz6g")
 BANKNIFTY=Quandl("NSE/NIFTY_BANK", api_key="uYHynQoeChxswuz2Sz6g")
 
