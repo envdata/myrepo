@@ -16,7 +16,7 @@ BANKNIFTY$Returns=log(BANKNIFTY$Close[1:(nrow(BANKNIFTY))]/BANKNIFTY$Close[2:nro
 
 Pair_cor=cor(NIFTY$Returns,BANKNIFTY$Returns)
 plot(NIFTY$Returns[1:(nrow(NIFTY)-1)],BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)])
-which(BANKNIFTY$Returns==min(BANKNIFTY$Returns))
+BANKNIFTY[which(BANKNIFTY$Returns==min(BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)])),]
 
 ml=lm(NIFTY$Returns[1:(nrow(NIFTY)-1)] ~ BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)])
 ml_rev=lm(BANKNIFTY$Returns[1:(nrow(BANKNIFTY)-1)] ~ NIFTY$Returns[1:(nrow(NIFTY)-1)])
